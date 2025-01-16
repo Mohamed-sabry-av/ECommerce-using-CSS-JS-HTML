@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+:root {
+  --blue: #2a2185;
+  --white: #fff;
+  --gray: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--gray);
+}
+
+.container {
+  display: flex;
+}
+
+.navigation {
+  width: 250px;
+  background: var(--blue);
+  padding: 30px 0;
+  position: fixed;
+  height: 100%;
+}
+
+.navigation ul {
+  list-style: none;
+}
+
+.navigation ul li {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.navigation ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+  padding: 10px 20px;
+}
+
+.navigation ul li a .icon {
+  min-width: 40px;
+  text-align: center;
+}
+
+.navigation ul li a .title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.main {
+  margin-left: 250px;
+  padding: 20px;
+  width: calc(100% - 250px);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: var(--white);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search {
+  position: relative;
+}
+
+.search label {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.search i {
+  position: absolute;
+  right: 10px;
+  color: var(--black2);
+}
+
+.user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.cardBox {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.card {
+  width: 30%;
+  background: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .numbers {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.card .cardName {
+  color: var(--black2);
+}
+
+.card .iconBox {
+  font-size: 2.5em;
+  color: var(--blue);
+}
+
+.details {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.details .recentOrders,
+.details .recentCustomers {
+  width: 48%;
+  background: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cardHeader h2 {
+  font-weight: 600;
+}
+
+.cardHeader .btn {
+  padding: 10px 20px;
+  background: var(--blue);
+  color: var(--white);
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 5px 10px;
+  background: var(--blue);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #1e1a63;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--black1);
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--black1);
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--black1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead {
+  background: var(--blue);
+  color: var(--white);
+}
+
+table thead tr th {
+  padding: 10px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+table tbody tr td {
+  padding: 10px;
+  border-bottom: 1px solid var(--gray);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status.delivered {
+  background: green;
+}
+
+.status.pending {
+  background: orange;
+}
+
+.status.return {
+  background: red;
+}
+
+.status.inProgress {
+  background: blue;
+}
+
+.imgBx {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.imgBx img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
